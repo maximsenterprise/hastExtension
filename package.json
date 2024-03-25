@@ -1,0 +1,27 @@
+{
+  "name": "hast",
+  "displayName": "Hast, command helper",
+  "description": "Syntax highlighting for Maxims Enterprise's Hast",
+  "version": "0.0.1",
+  "icon": "icons/icon.png",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "hast",
+      "aliases": ["Hast", "hast"], 
+      "extensions": [".hast"],
+      "filenames": ["Hastentry"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "hast",
+      "scopeName": "source.hast",
+      "path": "./syntaxes/hast.tmLanguage.json"
+    }]
+  }
+}

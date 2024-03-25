@@ -1,0 +1,74 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Hast",
+	"fileTypes": ["Hastentry"],
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#directives"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#other"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+                "name": "keyword.control.hast",
+                "match": "run|print"
+            }]
+		},
+		"variables": {
+			"patterns": [{
+				"name": "string.hast",
+				"match": "\\$(\\w+)|\\$\\((\\w+)\\)|\\$\\(\\w+\\):"
+			}]
+		},
+		"numbers": {
+			"patterns": [{
+				"name": "constant.numeric.hast",
+				"match": "\\b(\\d+|\\d+\\.\\d+|\\d+\\.|\\.\\d+)\\b"
+			}]
+		},
+		"functions": {
+			"patterns": [{
+				"name": "entity.name.function.hast",
+				"match": "\\b(hast-\\w+)\\b"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.block",
+				"begin": "\\*",
+				"end": "\\*"
+			}]
+		},
+		"directives": {
+			"patterns": [{
+				"name": "keyword.control.directive.hast",
+				"match": "\\b(hast\\-main|hast\\-clear|hast\\-run|hast\\-data)\\b"
+			}]
+		},
+		"other": {
+			"patterns": [{
+				"name": "entity.name.namespace.hast",
+				"match": "\\b(\\w+)\\b"
+			}]
+		}
+	},
+	"scopeName": "source.hast"
+}
