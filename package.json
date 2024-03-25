@@ -4,6 +4,7 @@
   "description": "Syntax highlighting for Maxims Enterprise's Hast",
   "version": "0.0.1",
   "icon": "icons/icon.png",
+  "publisher": "MaximsEnterprise",
   "engines": {
     "vscode": "^1.87.0"
   },
